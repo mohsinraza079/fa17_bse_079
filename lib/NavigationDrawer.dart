@@ -17,12 +17,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.greenAccent,
       appBar: AppBar(
         title: Text('Dice App'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
+
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -69,8 +70,8 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ],
-
         ),
+
       ),
       drawer: Drawer(
         child: ListView(
@@ -119,7 +120,7 @@ class _HomePageState extends State<HomePage> {
 
   void hardDice() {
     setState(() {
-      Navigator.push(context, MaterialPageRoute(builder: (context) =>  HardLevel()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) =>  HardDice()));
     });
   }
   void _showSecondPage(BuildContext context) {
