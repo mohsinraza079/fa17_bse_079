@@ -19,7 +19,59 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Text('xyz'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              children: [
+                Expanded(
+
+                  child: Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: FlatButton(
+                      textColor: Colors.black,
+                      color: Colors.grey,
+                      child: Text(
+                        'Simple Level',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                      onPressed: () {
+                        debugPrint('simple');
+                      },
+                    ),
+                  ),
+                ),
+                Expanded(
+
+                  child: Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: FlatButton(
+
+                      textColor: Colors.black,
+                      color: Colors.grey,
+                      child: Text(
+                        'Hard Level',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                        ),
+                      ),
+                      onPressed: () {
+                        debugPrint('hard');
+                      },
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+
+          ],
+        ),
       ),
       drawer: Drawer(
         child: ListView(
