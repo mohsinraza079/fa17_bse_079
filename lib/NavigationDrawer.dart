@@ -1,4 +1,8 @@
+import 'package:fa17_bse_079/HardLevel.dart';
 import 'package:flutter/material.dart';
+import 'SimpleLevel.dart';
+import 'HardLevel.dart';
+
 
 
 
@@ -39,9 +43,7 @@ class _HomePageState extends State<HomePage> {
                           fontSize: 20.0,
                         ),
                       ),
-                      onPressed: () {
-                        debugPrint('simple');
-                      },
+                      onPressed: simpleDice,
                     ),
                   ),
                 ),
@@ -60,9 +62,7 @@ class _HomePageState extends State<HomePage> {
                           fontSize: 20.0,
                         ),
                       ),
-                      onPressed: () {
-                        debugPrint('hard');
-                      },
+                      onPressed: hardDice,
                     ),
                   ),
                 ),
@@ -108,5 +108,16 @@ class _HomePageState extends State<HomePage> {
       ),
 
     );
+  }
+  void simpleDice() {
+    setState(() {
+      Navigator.push(context, MaterialPageRoute(builder: (context) =>  SimpleLevel()));
+    });
+  }
+
+  void hardDice() {
+    setState(() {
+      Navigator.push(context, MaterialPageRoute(builder: (context) =>  HardLevel()));
+    });
   }
 }
